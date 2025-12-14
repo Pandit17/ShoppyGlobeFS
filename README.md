@@ -1,18 +1,24 @@
 # Shoppy_Globe – Full-Stack React E-Commerce Demo
 
 A full-stack e-commerce application built with **React + Redux Toolkit** for the frontend and **Node.js + Express + MongoDB** for the backend.
+
 ➤ Lazy-loaded components with fallback UI (`LoadingFallback.jsx`)
+
 ➤ GitHub Pages-ready frontend deployment
+
 ➤ Backend provides RESTful APIs for products, cart, orders, and authentication
+
 ➤ JWT authentication with token blacklist for secure login/logout
+
 ➤ Styled with global CSS including custom scrollbar, header, product cards, and toast notifications
+
 ➤ Toast notifications powered by [React Toastify](https://fkhadra.github.io/react-toastify/) with custom theme
 
 ---
 
 ## Live Demo (Frontend)
 
-[https://Pandit17.github.io/Shoppy_Globe](https://Pandit17.github.io/Shoppy_Globe)
+[https://Pandit17.github.io/ShoppyGlobeFS/](https://Pandit17.github.io/ShoppyGlobeFS/)
 
 ---
 
@@ -49,7 +55,7 @@ A full-stack e-commerce application built with **React + Redux Toolkit** for the
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Pandit17/Shoppy_Globe_Full_Stack.git
+git clone https://github.com/Pandit17/ShoppyGlobeFS.git
 cd Shoppy_Globe_Full_Stack
 ```
 
@@ -60,8 +66,8 @@ cd Shoppy_Globe_Full_Stack
 ```bash
 cd backend
 npm install
-npm run seed         # Populate database with sample products and demo user
-npm run dev          # Start backend server at http://localhost:5000
+node scripts/seed.js        # Populate database with sample products and demo user
+npm run dev                 # Start backend server at http://localhost:5000
 ```
 
 > Default demo user credentials (from seed script):
@@ -90,7 +96,7 @@ npm run build         # Create production build in dist/
 npm run deploy        # Deploy to GitHub Pages
 ```
 
-> Ensure `vite.config.js` has `base: '/Shoppy_Globe/'` and `<RouterProvider>` is wrapped in `<HashRouter>` for proper routing.
+> Ensure `vite.config.js` has `base: '/ShoppyGlobeFS/'` and `<RouterProvider>` is wrapped in `<HashRouter>` for proper routing.
 
 ---
 
@@ -134,7 +140,7 @@ Shoppy_Globe_Full_Stack/
 ## Notes for GitHub Pages (Frontend)
 
 * Wrap `<RouterProvider router={router} />` inside `<HashRouter>` in `main.jsx`.
-* `vite.config.js` must have `base: '/Shoppy_Globe/'` for correct routing.
+* `vite.config.js` must have `base: '/ShoppyGlobeFS/'` for correct routing.
 * 404 page (`NotFound.jsx`) works correctly for client-side navigation.
 * Lazy-loaded components use `LoadingFallback.jsx` as fallback.
 * Toast notifications fully styled and functional using `react-toastify`.
