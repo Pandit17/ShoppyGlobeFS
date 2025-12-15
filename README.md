@@ -58,7 +58,7 @@ A full-stack e-commerce application built with **React + Redux Toolkit** for the
 ```bash
 git clone https://github.com/Pandit17/ShoppyGlobeFS.git
 cd Shoppy_Globe_Full_Stack
-```
+````
 
 ---
 
@@ -181,5 +181,4 @@ Shoppy_Globe_Full_Stack/
 5. Open a Pull Request
 
 ---
-
 
