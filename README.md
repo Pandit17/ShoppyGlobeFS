@@ -18,7 +18,8 @@ A full-stack e-commerce application built with **React + Redux Toolkit** for the
 
 ## Live Demo (Frontend)
 
-[https://Pandit17.github.io/ShoppyGlobeFS/](https://Pandit17.github.io/ShoppyGlobeFS/)
+* Currently Under Step . The frontend will be available here once deployed. *
+[]() 
 
 ---
 
