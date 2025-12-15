@@ -36,7 +36,7 @@ A full-stack e-commerce application built with **React + Redux Toolkit** for the
 * Custom scrollbar, header, product card, and toast styles
 * Toast notifications for success, error, info, and warning messages
 * 404 Not Found page for invalid routes
-* Ready for GitHub Pages deployment (`/Shoppy_Globe` basename)
+* Ready for GitHub Pages deployment (`/ShoppyGlobeFS` basename)
 
 **Backend:**
 
