@@ -150,7 +150,7 @@ export default function Checkout() {
 
   return (
     <div className="checkout">
-      <h2>Checkout</h2>
+      <h2 className="checkout-heading">Checkout</h2>
       <div className="checkout-grid">
         <form className="checkout-form">
           <label>

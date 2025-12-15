@@ -19,6 +19,7 @@ A full-stack e-commerce application built with **React + Redux Toolkit** for the
 ## Live Demo (Frontend)
 
 * Currently Under Step . The frontend will be available here once deployed. *
+<<<<<<< HEAD
 []() 
 
 ---
