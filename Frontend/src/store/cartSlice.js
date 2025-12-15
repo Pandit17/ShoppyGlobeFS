@@ -109,13 +109,14 @@ export const removeFromCartBackend = createAsyncThunk(
 /**
  * Cart state slice.
  *
- * Manages cart items, loading states, and backend synchronization
- * for authenticated users.
+ * Manages cart items, search filtering, loading states,
+ * and backend synchronization for authenticated users.
  */
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
     cartItems: [],
+    searchQuery: "",
     loading: false,
     error: null,
   },
@@ -126,6 +127,14 @@ const cartSlice = createSlice({
      */
     clearCart(state) {
       state.cartItems = [];
+      state.searchQuery = "";
+    },
+
+    /**
+     * Updates the global search query used for product filtering.
+     */
+    setSearchQuery(state, action) {
+      state.searchQuery = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -166,5 +175,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { clearCart } = cartSlice.actions;
+export const { clearCart, setSearchQuery } = cartSlice.actions;
 export default cartSlice.reducer;

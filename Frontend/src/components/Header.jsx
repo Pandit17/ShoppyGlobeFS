@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { fetchCartItemsBackend } from "../store/cartSlice";
+import { fetchCartItemsBackend, setSearchQuery } from "../store/cartSlice";
 import { logout } from "../store/authSlice";
 import { toast } from "react-toastify";
 
@@ -19,11 +19,10 @@ export default function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems, searchQuery } = useSelector((state) => state.cart);
   const cartArray = Array.isArray(cartItems) ? cartItems : [];
   const totalCount = cartArray.reduce((sum, item) => sum + (item.quantity || 0), 0);
 
-  const searchQuery = useSelector((state) => state.cart.searchQuery || "");
   const token = useSelector((state) => state.auth?.token);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -74,10 +73,10 @@ export default function Header() {
       <div className="header-right">
         <div className="search">
           <input
-            value={searchQuery}
+            value={searchQuery || ""}
             placeholder="Search products..."
             aria-label="Search products"
-            readOnly
+            onChange={(e) => dispatch(setSearchQuery(e.target.value))}
           />
         </div>
 
